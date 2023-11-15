@@ -2,7 +2,6 @@
 	import Nav from '../lib/Components/nav.svelte';
 	import Main from '../lib/Components/Tittle.svelte';
     import Portfolio from '$lib/Components/portfolio.svelte';
-	import Styles from '../lib/style/app.scss';
 	import AboutUs from '$lib/Components/aboutUs.svelte';
 </script>
 

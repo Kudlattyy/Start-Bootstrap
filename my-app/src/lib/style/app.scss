@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Quicksand&display=swap');
+
+:root {
+	--base-color-blue: #2c3e50;
+	--base-color-green: #1abc9c;
+	--base-color-white: #ffffff;
+
+	--base-font-color-white: #ffffff;
+	--base-font-color-black: #000000;
+	--base-font-color-blue: #2c3e50;
+
+	--base-font-bold: 'Montserrat', sans-serif;
+	--base-font-slim: 'Quicksand', sans-serif;
+
+	
+	--tittle-font-size: 3.5rem;
+	--big-font-size: 2rem;
+	--base-font-size: 1.5rem;
+	--small-font-size: 0.5rem;
+}
 
 * {
 	box-sizing: border-box;

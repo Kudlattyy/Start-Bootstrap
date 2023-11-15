@@ -1,26 +1,25 @@
 <script lang="ts">
-	import Styles from '$lib/style/app.scss';
 </script>
 
 <body>
 	<section class="AboutUs">
-		<div class="Container">
+		<div class="Header">
 			<div class="Tittle">ABOUT</div>
 		</div>
-		<div class="Container2">
-			<div class="Opisy">
-				<div class="Opis-First">
+		<div class="Content">
+			<div class="Description">
+				<div class="Description-First">
 					Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the
 					complete source files including HTML, CSS, and JavaScript as well as optional SASS
 					stylesheets for easy customization.
 				</div>
-				<div class="Opis-Second">
+				<div class="Description-Second">
 					You can create your own custom avatar for the masthead, change the icon in the dividers,
 					and add your email address to the contact form to make it fully functional!
 				</div>
 			</div>
 		</div>
-		<div class="Container3">
+		<div class="Footer">
 			<div class="Button">
 				<button class="Download">Free Download!</button>
 			</div>
@@ -33,53 +32,53 @@
 	.AboutUs {
 		height: 70vh;
 		width: 100%;
-		background-color: #1abc9c;
-		.Container {
+		background-color: var(--base-color-green);
+		.Header {
 			display: flex;
 			justify-content: center;
 			.Tittle {
 				height: 10vh;
 				width: 60%;
 				display: flex;
-				margin-top: 100px;
 				justify-content: center;
-				font-size: 64px;
-				color: #ffffff;
-				font-family: 'Montserrat', sans-serif;
+				margin-top: 100px;
+				font-size: var(--tittle-font-size);
+				color: var(--base-font-color-white);
+				font-family: var(--base-font-bold);
 			}
 		}
-		.Container2 {
+		.Content {
 			display: flex;
 			justify-content: center;
-			.Opisy {
+			.Description {
 				height: 30vh;
-				width: 60vh;
+				width: 40vw;
 				display: flex;
 				justify-content: center;
-				color: #ffffff;
-				font-family: 'Montserrat', sans-serif;
-				font-size: 22px;
+				color: var(--base-font-color-white);
+				font-family: var(--base-font-slim);
+				font-size: var(--base-font-size);
 			}
 		}
-		.Container3 {
+		.Footer {
 			height: 10vh;
 			width: 100%;
 			display: flex;
 			justify-content: center;
-            .Download{
-                height: 7vh;
-                width: 23vh;
-                font-size:22px;
-                color: #ffffff;
-                background-color: #1abc9c;
-                border: solid 2px #ffffff;
-                border-radius: 10px;
-            }
-            .Download:hover{
-                    color: black;
-                    background-color: #ffffff;
-                    transition-duration: 2s;
-            }
+			.Download {
+				height: 7vh;
+				width: 23vh;
+				background-color: var(--base-color-green);
+				border: solid 2px #ffffff;
+				border-radius: 10px;
+				font-size: var(--base-font-size);
+				color:	var(--base-font-color-white);
+			}
+			.Download:hover {
+				color: var(--base-font-color-black);
+				background-color: var(--base-color-white);
+				transition-duration: 2s;
+			}
 		}
 	}
 </style>

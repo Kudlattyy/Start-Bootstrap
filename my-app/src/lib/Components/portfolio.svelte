@@ -7,7 +7,6 @@
 	import Game from '$lib/Images/game.png';
 	import Safe from '$lib/Images/safe.png';
 	import Submarine from '$lib/Images/submarine.png';
-	import PlaceHolder from '$lib/Images/placeholder.jpg';
 
 	let boolean = false;
 
@@ -24,7 +23,7 @@
 		src: string;
 	};
 
-	let oferty: oferta[] = [
+	/*let oferty: oferta[] = [
 		{
 			Tittle: 'Log Cabin',
 			src: Cabin
@@ -50,26 +49,24 @@
 			src: Submarine
 		}
 	];
+	*/
 </script>
 
 <body>
 	{#if boolean == true}
-		<div class="main3" transition:fly={{ delay: 500, duration: 500 }}>
+	<section class="Fly-Menu">
+		<div class="Container" transition:fly={{ delay: 500, duration: 500 }}>
 			<div class="Information-Menu">
-				{#each oferty as oferta}
-					<div class="test">
-						<img src={oferta.src} alt="">
-					</div>
-				{/each}
-				<button on:click={OffMenu}>dsasdasdasdadsda</button>
+				<button on:click={OffMenu}>Zamknij</button>
 			</div>
 		</div>
+	</section>
 	{/if}
 
-	<section class="main2">
+	<section class="Portfolio">
 		<div class="Containers">
-			<div class="Tittle2">Portfolio</div>
-			<div class="Test">
+			<div class="Header">Portfolio</div>
+			<div class="Content">
 				<div class="Projects">
 					<div class="item item-1"><img class="Size" src={Cabin} alt="" on:click={OpenMenu} /></div>
 					<div class="item item-2"><img class="Size" src={Cake} alt="" on:click={OpenMenu} /></div>
@@ -91,34 +88,33 @@
 
 <style lang="scss">
 	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
-	.main2 {
+	.Portfolio {
 		height: 100vh;
 		width: 100%;
-		.Tittle2 {
+		.Header {
 			height: 20vh;
 			width: 100%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-family: 'Montserrat', sans-serif;
-			font-size: 64px;
-			color: #2c3e50;
+			display: grid;
+			place-items: center;
+			font-family: var(--base-font-bold);
+			font-size: var(--tittle-font-size);
+			color: var(--base-font-color-blue);
 		}
-		.Test {
+		.Content {
 			height: 80vh;
 			width: 100%;
 			display: grid;
 			place-items: center;
 			.Projects {
 				display: grid;
-				grid-template-columns: 500px 500px 500px;
-				grid-template-rows: 350px 350px;
+				grid-template-columns: 450px 450px 450px;
+				grid-template-rows: 300px 300px;
 				grid-gap: 50px;
 				.Size {
-					height: 350px;
-					width: 500px;
+					height: 300px;
+					width: 450px;
 					border-radius: 25px;
-					transition-duration: 2s;
+					transition-duration: 1s;
 				}
 				.Size:hover {
 					filter: blur(5px);
@@ -127,14 +123,15 @@
 		}
 	}
 
-	.main3 {
+	.Container {
 		width: 100vw;
-		height: 100vh;
-		background-color: rgba(37, 37, 37, 0.8);
-		position: absolute;
-		z-index: 10;
+		height: 100%;
 		display: grid;
 		place-items: center;
+		position: absolute;
+		z-index: 10;
+		overflow: hidden;
+		background-color: rgba(37, 37, 37, 0.8);
 		.Information-Menu {
 			width: 50vw;
 			height: 95vh;

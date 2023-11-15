@@ -3,29 +3,47 @@
 </script>
 
 <body>
-	<div class="main">
+	<section class="Title">
 		<div class="Container">
-			<img src={Avatar} alt="Gostek" />
+			<div class="Header">
+				<img src={Avatar} alt="Guy-Icon" />
+			</div>
+			<div class="Content">
+				<div class="Caption">START BOOTSTRAP</div>
+				<div class="SVG" />
+				<div class="Description">Graphic Artist - Web Designer - Illustrator</div>
+			</div>
 		</div>
-	</div>
-	<slot />
+		<slot />
+	</section>
 </body>
 
 <style lang="scss">
-	.main {
+	.Title {
 		height: 80vh;
 		width: 100%;
-		background-color: #1abc9c;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
+		background-color: var(--base-color-green);
+		display: grid;
+		place-items: center;
 		.Container {
-			height: 80vh;
-			width: 30vw;
+			height: 40vh;
+			width: 50vw;
+			display: grid;
+			place-items: center;
+		}
+		.Content {
 			display: flex;
-			justify-content: center;
-			align-items: center;
+			flex-direction: column;
+			.Caption{
+				font-size: var(--tittle-font-size);
+				color: var(--base-font-color-white);
+				font-family: var(--base-font-bold);
+			}
+			.Description{
+				font-size: var(--base-font-size);
+				color: var(--base-font-color-white);
+				font-family: var(--base-font-slim);
+			}
 		}
 	}
 </style>

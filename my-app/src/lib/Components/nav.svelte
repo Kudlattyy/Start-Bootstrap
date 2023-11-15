@@ -1,8 +1,8 @@
 <body>
-	<div class="Navbar">
+	<section class="Navbar">
 		<div class="Container">
 			START BOOTSTRAP
-			<div class="Menu">
+			<div class="Content-Menu">
 				<ul>
 					<li>Portfolio</li>
 					<li>About</li>
@@ -10,7 +10,7 @@
 				</ul>
 			</div>
 		</div>
-	</div>
+	</section>
 	<slot />
 </body>
 
@@ -27,27 +27,33 @@
 	}
 
 	.Navbar {
-		height: 11vh;
+		height: 10vh;
 		width: 100%;
-		background-color: #2c3e50;
-		position: fixed;
 		display: flex;
 		align-items: center;
-		z-index: 10	;
+		position: fixed;
+		z-index: 10;
+		background-color: var(--base-color-blue);
 		.Container {
-			height: 9vh;
+			height: 10vh;
 			width: 100%;
 			display: flex;
 			justify-content: space-between;
-			margin-left: 10vw;
 			align-items: center;
-			color: #ffffff;
-			font-family: 'Montserrat', sans-serif;
-			font-size: 32px;
-			.Menu {
-				font-size: 24px;
+			margin-left: 10vw;
+			color: var(--base-font-color-white);
+			font-family: var(--base-font-bold);
+			font-size: var(--big-font-size);
+			.Content-Menu {
 				margin-right: 10vw;
+				font-family: var(--base-font-slim);
+				font-size: var(--base-font-size);
 			}
 		}
 	}
+		@media screen and (max-width: 580px) {
+ 		 .navbar {
+   		 padding: 20px 10px !important; 
+  			}
+		}
 </style>
