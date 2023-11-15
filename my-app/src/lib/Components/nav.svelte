@@ -33,7 +33,7 @@
 		position: fixed;
 		display: flex;
 		align-items: center;
-		z-index: 10;
+		z-index: 10	;
 		.Container {
 			height: 9vh;
 			width: 100%;
