@@ -62,15 +62,22 @@
 
 	input {
 		border: none;
+        outline: none;
 		width: 100%;
 		padding-top: 20px;
-		border-bottom: 1px solid var(--font-color-grey);
+		border-bottom: 0.5px solid var(--input-color);    
+        font-size: var(--big-font-size);
+        color: var(--base-font-color-black)
 	}
 
 	textarea {
+        outline: none;
 		border: none;
 		width: 100%;
 		padding-top: 20px;
-		border-bottom: 1px solid var(--font-color-grey);
+		border-bottom: 1px solid var(--input-color);
+        resize: vertical;
+        font-size: var(--big-font-size);
+        color: var(--base-font-color-black)
 	}
 </style>

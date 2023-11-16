@@ -4,6 +4,8 @@
 	import Portfolio from '$lib/Components/portfolio.svelte';
 	import AboutUs from '$lib/Components/aboutUs.svelte';
 	import Contact from '$lib/Components/contact.svelte';
+	import Footer from '$lib/Components/footer.svelte';
+	import LittleFooter from '$lib/Components/littleFooter.svelte';
 </script>
 
 <body>
@@ -12,6 +14,8 @@
 	<Portfolio />
 	<AboutUs />
 	<Contact />
+	<Footer />
+	<LittleFooter/>
 </body>
 
 <style lang="scss">
