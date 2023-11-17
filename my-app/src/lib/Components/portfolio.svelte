@@ -9,13 +9,16 @@
 	import Submarine from '$lib/Images/submarine.png';
 
 	let boolean = false;
+	let selectedImage = '';
 
-	function OpenMenu() {
+	function OpenMenu(src: string) {
 		boolean = true;
+		selectedImage = src;
 	}
 
 	function OffMenu() {
 		boolean = false;
+		selectedImage = '';
 	}
 
 	type oferta = {
@@ -23,51 +26,72 @@
 		src: string;
 	};
 
-
-  
-
-	let test
+	let oferty: oferta[] = [
+		{
+			Tittle: 'Log Cabin',
+			src: Cabin
+		},
+		{
+			Tittle: 'Cake',
+			src: Cake
+		},
+		{
+			Tittle: 'Circus',
+			src: Circus
+		},
+		{
+			Tittle: 'Game',
+			src: Game
+		},
+		{
+			Tittle: 'Safe',
+			src: Safe
+		},
+		{
+			Tittle: 'Submarine',
+			src: Submarine
+		}
+	];
 </script>
 
 <body>
 	{#if boolean == true}
-	<section class="Fly-Menu">
-		<div class="Container" transition:fly={{ delay: 500, duration: 500 }}>
-			<div class="Information-Menu">
-				<button on:click={OffMenu}>Zamknij</button>
+		<section class="Fly-Menu">
+			<div class="Container" transition:fly={{ delay: 500, duration: 500 }}>
+				<div class="Information-Menu">
+					<button on:click={OffMenu}>Zamknij</button>
+					{#if selectedImage}
+						<img class="Size" src={selectedImage} alt="" />
+					{/if}
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 	{/if}
 
-	<section class="Portfolio" bind:this={test}>
+	<section class="Portfolio">
 		<div class="Containers">
 			<div class="Header">Portfolio</div>
 			<div class="Content">
 				<div class="Projects">
-					<div class="item item-1"><img class="Size" src={Cabin} alt="" on:click={OpenMenu} /></div>
-					<div class="item item-2"><img class="Size" src={Cake} alt="" on:click={OpenMenu} /></div>
-					<div class="item item-3">
-						<img class="Size" src={Circus} alt="" on:click={OpenMenu} />
-					</div>
-					<div class="item item-4"><img class="Size" src={Game} alt="" on:click={OpenMenu} /></div>
-					<div class="item item-5"><img class="Size" src={Safe} alt="" on:click={OpenMenu} /></div>
-					<div class="item item-6">
-						<img class="Size" src={Submarine} alt="" on:click={OpenMenu} />
-					</div>
+					{#each oferty as oferta}
+						<div class="test">
+							<img class="Size" src={oferta.src} alt="" on:click={() => OpenMenu(oferta.src)} />
+						</div>
+					{/each}
 				</div>
 			</div>
 		</div>
 
 		<slot />
-	</section></body
->
+	</section>
+</body>
 
 <style lang="scss">
 	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 	.Portfolio {
 		height: 100vh;
 		width: 100%;
+		z-index: 100;
 		.Header {
 			height: 20vh;
 			width: 100%;

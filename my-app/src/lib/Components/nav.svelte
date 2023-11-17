@@ -11,7 +11,7 @@
 						<a href="">Portfolio</a>
 					</li>
 					<li>
-						<a href="">About Us</a>
+						<a href="">About</a>
 					</li>
 					<li>
 						<a href="">Contact</a>
@@ -33,17 +33,19 @@
 	li {
 		display: inline-block;
 		margin-right: 20px;
+		margin-bottom: 1vh;
+		text-transform: uppercase;
 	}
 
-	a{
-		font-size: var(--small-font-size);
+	a {
+		font-size: var(--smallest-font-size);
 		color: var(--base-font-color-white);
 		outline-color: transparent;
 		text-decoration: none;
 		transition: 0.3s;
 	}
 
-	a:hover{
+	a:hover {
 		color: var(--base-color-green);
 	}
 
@@ -59,7 +61,7 @@
 			height: 10vh;
 			width: 82vw;
 			padding-left: calc(var(--nav-padding-x) * 0.5);
-			padding-right: calc(var(--nav-padding-x) * 0.5);
+			padding-right: calc(var(--nav-padding-x) * 0.8);
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -69,4 +71,5 @@
 			font-size: var(--big-font-size);
 		}
 	}
+
 </style>
