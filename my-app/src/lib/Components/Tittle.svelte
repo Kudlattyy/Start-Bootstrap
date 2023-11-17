@@ -43,6 +43,7 @@
 				font-size: var(--base-font-size);
 				color: var(--base-font-color-white);
 				font-family: var(--base-font-slim);
+				text-align: center;
 			}
 		}
 	}

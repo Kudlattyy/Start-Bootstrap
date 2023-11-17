@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Portfolio from '$lib/Components/portfolio.svelte';
 </script>
 
 <body>

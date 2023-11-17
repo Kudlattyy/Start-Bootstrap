@@ -23,33 +23,10 @@
 		src: string;
 	};
 
-	/*let oferty: oferta[] = [
-		{
-			Tittle: 'Log Cabin',
-			src: Cabin
-		},
-		{
-			Tittle: 'Cake',
-			src: Cake
-		},
-		{
-			Tittle: 'Circus',
-			src: Circus
-		},
-		{
-			Tittle: 'Game',
-			src: Game
-		},
-		{
-			Tittle: 'Safe',
-			src: Safe
-		},
-		{
-			Tittle: 'Submarine',
-			src: Submarine
-		}
-	];
-	*/
+
+  
+
+	let test
 </script>
 
 <body>
@@ -63,7 +40,7 @@
 	</section>
 	{/if}
 
-	<section class="Portfolio">
+	<section class="Portfolio" bind:this={test}>
 		<div class="Containers">
 			<div class="Header">Portfolio</div>
 			<div class="Content">

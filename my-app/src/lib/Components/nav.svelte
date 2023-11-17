@@ -1,12 +1,21 @@
+<script lang="ts">
+</script>
+
 <body>
 	<section class="Navbar">
 		<div class="Container">
 			START BOOTSTRAP
 			<div class="Content-Menu">
 				<ul>
-					<li>Portfolio</li>
-					<li>About</li>
-					<li>Contact</li>
+					<li>
+						<a href="">Portfolio</a>
+					</li>
+					<li>
+						<a href="">About Us</a>
+					</li>
+					<li>
+						<a href="">Contact</a>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -26,8 +35,20 @@
 		margin-right: 20px;
 	}
 
+	a{
+		font-size: var(--small-font-size);
+		color: var(--base-font-color-white);
+		outline-color: transparent;
+		text-decoration: none;
+		transition: 0.3s;
+	}
+
+	a:hover{
+		color: var(--base-color-green);
+	}
+
 	.Navbar {
-		height: 10vh;
+		height: 10.5vh;
 		width: 100%;
 		display: flex;
 		align-items: center;
@@ -36,7 +57,9 @@
 		background-color: var(--base-color-blue);
 		.Container {
 			height: 10vh;
-			width: 100%;
+			width: 82vw;
+			padding-left: calc(var(--nav-padding-x) * 0.5);
+			padding-right: calc(var(--nav-padding-x) * 0.5);
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -44,16 +67,6 @@
 			color: var(--base-font-color-white);
 			font-family: var(--base-font-bold);
 			font-size: var(--big-font-size);
-			.Content-Menu {
-				margin-right: 10vw;
-				font-family: var(--base-font-slim);
-				font-size: var(--base-font-size);
-			}
 		}
 	}
-		@media screen and (max-width: 580px) {
- 		 .navbar {
-   		 padding: 20px 10px !important; 
-  			}
-		}
 </style>
