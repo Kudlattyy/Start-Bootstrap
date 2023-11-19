@@ -6,7 +6,7 @@
 	<section class="Title">
 		<div class="Container">
 			<div class="Header">
-				<img src={Avatar} alt="Guy-Icon" />
+				<img class="Avatar" src={Avatar} alt="Guy-Icon" />
 			</div>
 			<div class="Content">
 				<div class="Caption">START BOOTSTRAP</div>
@@ -55,7 +55,8 @@
 			display: flex;
 			flex-direction: column;
 			.Caption {
-				font-size: var(--tittle-font-size);
+				padding-top: 25px;
+				font-size: var(--mega-font-size);
 				color: var(--base-font-color-white);
 				font-family: var(--base-font-bold);
 			}
@@ -68,29 +69,33 @@
 		}
 	}
 
-	.divider-custom{
+	.divider-custom {
 		margin: 1.25rem 0 1.5rem;
 		width: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		.divider-custom-line{
+		.divider-custom-line {
 			width: 10vw;
 			height: 0.4vh;
 			background-color: var(--base-color-white);
 			border-radius: 5px;
 		}
-		.divider-custom-icon{
+		.divider-custom-icon {
 			width: 5vw;
 			height: 5vh;
 			display: flex;
 			justify-content: center;
 		}
-		svg{
+		svg {
 			color: var(--base-font-color-white);
 			width: 3vw;
 			height: 5vh;
-			
 		}
+	}
+
+	.Avatar {
+		height: 240px;
+		widows: 254.55px;
 	}
 </style>

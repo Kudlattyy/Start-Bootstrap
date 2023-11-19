@@ -1,20 +1,71 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
+	let navbar;
+	let container;
+	let links;
+	let currentPath;
+
+	onMount(() => {
+		window.addEventListener('scroll', () => {
+			if (window.pageYOffset > 0) {
+				navbar.style.height = '7vh';
+				container.style.fontSize = 'calc(var(--big-font-size) * 0.8)';
+				links.forEach((link) => (link.style.fontSize = 'calc(var(--smallest-font-size) * 0.8)'));
+			} else {
+				navbar.style.height = '10.5vh';
+				container.style.fontSize = 'var(--big-font-size)';
+				links.forEach((link) => (link.style.fontSize = 'var(--smallest-font-size)'));
+			}
+		});
+
+		window.addEventListener(
+			'hashchange',
+			() => {
+				currentPath = window.location.pathname;
+			},
+			false
+		);
+
+		currentPath = window.location.pathname;
+	});
+
+	function scrollIntoView(event) {
+		event.preventDefault();
+		const el = document.querySelector(event.currentTarget.getAttribute('href'));
+		if (el) el.scrollIntoView({ behavior: 'smooth' });
+	}
 </script>
 
 <body>
-	<section class="Navbar">
-		<div class="Container">
+	<section class="Navbar" bind:this={navbar}>
+		<div class="Container" bind:this={container}>
 			START BOOTSTRAP
 			<div class="Content-Menu">
 				<ul>
 					<li>
-						<a href="">Portfolio</a>
+						<a
+							bind:this={links}
+							href=".Portfolio"
+							on:click|preventDefault={scrollIntoView}
+							class:active={currentPath === '.Portfolio'}>Portfolio</a
+						>
 					</li>
 					<li>
-						<a href="">About</a>
+						<a
+							bind:this={links}
+							href=".AboutUs"
+							on:click|preventDefault={scrollIntoView}
+							class:active={currentPath === '.AboutUs'}>About</a
+						>
 					</li>
 					<li>
-						<a href="">Contact</a>
+						<a
+							bind:this={links}
+							href=".contact"
+							on:click|preventDefault={scrollIntoView}
+							class:active={currentPath === '.contact'}>Contact</a
+						>
 					</li>
 				</ul>
 			</div>
@@ -49,6 +100,10 @@
 		color: var(--base-color-green);
 	}
 
+	a.active {
+		background-color: var(--base-color-green);
+	}
+
 	.Navbar {
 		height: 10.5vh;
 		width: 100%;
@@ -57,6 +112,7 @@
 		position: fixed;
 		z-index: 10;
 		background-color: var(--base-color-blue);
+		transition: height 0.5s ease;
 		.Container {
 			height: 10vh;
 			width: 82vw;
@@ -71,5 +127,4 @@
 			font-size: var(--big-font-size);
 		}
 	}
-
 </style>
