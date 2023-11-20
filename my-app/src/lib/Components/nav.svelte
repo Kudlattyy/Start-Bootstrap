@@ -123,6 +123,7 @@
 			align-items: center;
 			margin-left: 10vw;
 			color: var(--base-font-color-white);
+			font-weight: 700;
 			font-family: var(--base-font-bold);
 			font-size: var(--big-font-size);
 		}

@@ -59,11 +59,12 @@
 				font-size: var(--mega-font-size);
 				color: var(--base-font-color-white);
 				font-family: var(--base-font-bold);
+				font-weight: 700;
 			}
 			.Description {
 				font-size: var(--base-font-size);
 				color: var(--base-font-color-white);
-				font-family: var(--base-font-slim);
+				font-family: var(--base-font-bold);
 				text-align: center;
 			}
 		}
@@ -76,26 +77,26 @@
 		justify-content: center;
 		align-items: center;
 		.divider-custom-line {
-			width: 10vw;
-			height: 0.4vh;
+			width: 6vw;
+			height: 0.5vh;
 			background-color: var(--base-color-white);
 			border-radius: 5px;
 		}
 		.divider-custom-icon {
-			width: 5vw;
-			height: 5vh;
+			width: 3.5vw;
+			height: 3.5vh;
 			display: flex;
 			justify-content: center;
 		}
 		svg {
 			color: var(--base-font-color-white);
-			width: 3vw;
-			height: 5vh;
+			width: 3.5vw;
+			height: 3.5vh;
 		}
 	}
 
 	.Avatar {
-		height: 240px;
-		widows: 254.55px;
+		height: 260px;
+		widows: 270.55px;
 	}
 </style>

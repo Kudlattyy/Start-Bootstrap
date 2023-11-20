@@ -49,6 +49,7 @@
 			justify-content: space-between;
 			font-size: var(--big-font-size);
 			font-family: var(--base-font-bold);
+			font-weight: 700;
 			color: var(--base-font-color-white);
 		}
         .Description-Row{
@@ -56,7 +57,7 @@
 			display: flex;
 			justify-content: space-between;
 			font-size: var(--base-font-size);
-			font-family: var(--base-font-slim);
+			font-family: var(--base-font-bold);
 			color: var(--base-font-color-white);
             text-align: center;
         }
