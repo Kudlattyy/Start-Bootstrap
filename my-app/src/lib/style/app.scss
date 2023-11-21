@@ -1,3 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat: 400,700');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700');
+
+:root {
+	--base-color-blue: #2c3e50;
+	--base-color-green: #1abc9c;
+	--darker-color-green: #137d68;
+	--base-color-white: #ffffff;
+	--color-darkerblue: #1a252f;
+
+	--base-font-color-white: #ffffff;
+	--base-font-color-black: #000000;
+	--base-font-color-blue: #2c3e50;
+	--font-color-grey: #6c757d;
+
+	--nav-padding-x: 15rem;
+
+	--base-font-bold: 'Montserrat', sans-serif;
+	--second-font: 'Kaushan Script', cursive;
+	--third-font: 'Droid Serif', serif;
+	--fourth-font: 'Roboto Slab', serif;
+
+	--mega-font-size: 4rem;
+	--tittle-font-size: 3rem;
+	--bigger-font-size: 2.5rem;
+	--bigx-font-size: 2rem;
+	--big-font-size: 1.75em;
+	--base-font-size: 1.5rem;
+	--small-font-size: 1.20rem;
+	--smallest-font-size: 1rem;
+
+	--button-padding: 1rem 1.75rem;
+	--button-font-size: 1.25rem;
+
+	--input-color: #ced4da;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0%;
