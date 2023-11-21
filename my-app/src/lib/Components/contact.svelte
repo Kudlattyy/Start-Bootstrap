@@ -155,4 +155,28 @@
 			}
 		}
 	}
+	@media (max-width: 768px) {
+		
+		.contact{
+			height: 150vh;
+
+		}
+		.Idk{
+			width: 100%;
+			.divider-custom {
+			height: 5vh;
+			.divider-custom-line {
+				width: 30vw;
+			}
+			.divider-custom-icon {
+				width: 10vw;
+				height: 10vh;
+			}
+			svg {
+				width: 10vw;
+				height: 10vh;
+			}
+		}
+	}
+		}
 </style>

@@ -128,4 +128,25 @@
 			font-size: var(--big-font-size);
 		}
 	}
+
+	@media (max-width: 768px) {
+
+		
+
+		.Navbar {
+			width: 100vw;
+			.Container {
+				height: 10vh;
+				width: 100vw;
+				padding-left: calc(var(--nav-padding-x) * 0.1);
+				padding-right: calc(var(--nav-padding-x) * 0.8);
+				margin-left: 0%;
+				font-size: var(--base-font-size);
+				.Content-Menu{
+					margin-left: 15vw;
+					font-size: var(--smallest-font-size) ;
+				}
+			}
+		}
+	}
 </style>
